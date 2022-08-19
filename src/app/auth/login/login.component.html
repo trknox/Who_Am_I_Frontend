@@ -1,0 +1,42 @@
+<div class="container-fluid">
+
+  <div class="info">
+    <h1 class="title">Log In</h1>
+    
+    <form (ngSubmit)="processForm(loginForm)" class= "sign-in-form" #loginForm="ngForm">
+      <div class="formContainer">
+        
+        <div class="form-block">
+          <label>
+            <span>Username</span></label>
+          <input class="form-control" [(ngModel)]="auth.username" type="text" id="login-username" name="login-username" [placeholder]="placeholders.username" #name="ngModel" required>
+          </div>
+
+          <div class="form-block">
+          <label>
+          <span>Password</span>            </label>
+          <input class="form-control" [(ngModel)]="auth.password" type="password" id="login-password" name="login-password" [placeholder]="placeholders.password" #name="ngModel" required>
+      </div>
+          <div class="form-group">
+            <div *ngIf="displayFormSubmitError" style="color: red">
+              Invalid Log-In.
+            </div>
+            <div class="button-container">
+              <button type="submit" value="Login" class="submit">Login</button>
+            </div>
+          </div>
+    
+      </div>
+    </form>
+    
+    
+
+    <p class="login">Don't have an account? <a routerLink="">Sign Up</a> </p>
+
+  </div>
+
+  <div class="img">
+    <img src="https://whoami.blob.core.windows.net/images/saul.jpg" alt="saul">
+  </div>
+
+</div>
