@@ -1,3 +1,4 @@
+import { Character } from './../models/character';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
@@ -16,15 +17,19 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class HintService {
+export class CharacterService {
 
-  public ROOT_URL = 'http://localhost:8080/WhoAmI/hints/char-id/';
+  public ROOT_URL = 'http://localhost:8080/WhoAmI/character/';
 
   constructor(private http: HttpClient) {
   }
 
-  getHintByCharId (charId: string): Observable<Hints> {
-    return this.http.get<Hints>(this.ROOT_URL + charId);
+  getCharById (id: string): Observable<Character> {
+    return this.http.get<Character>(this.ROOT_URL + 'id/' + id);
+  }
+
+  getAllCharacters (): Observable<Character[]> {
+    return this.http.get<Character[]>(this.ROOT_URL + 'all-characters')
   }
 
   

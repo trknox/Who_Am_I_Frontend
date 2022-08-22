@@ -1,1 +1,45 @@
-<p>hints works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>leader board</h1>
+            <div *ngFor="let score of allScoresAsc" >
+                <p>{{score.time}}</p>
+            </div>
+            <div *ngFor="let username of user">
+                <p>{{username.username}}</p>
+            </div>
+            <p>{{i}}</p>
+        </div>
+        <div class="col-sm">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            <button type="button" class="startBtn timerBtn" (click)="startGame()" (click)="start()" *ngIf="!active">Start</button>
+            <button type="button" class="stopBtn timerBtn" (click)="stop()" *ngIf="active">Stop</button>
+            <div class="time">{{display | date :"HH:mm:ss":'UTC'}}</div>
+            
+            <div>{{seconds}}</div>
+
+            </div>
+            <div class="border d-flex flex-column justify-content-center align-items-center hintContainer">
+                <h2>Hint</h2>
+                <hr>
+                <p class="hint">{{hint}}</p>
+                <p>{{scripture}}</p>
+                <button type="button" class="hintBtn" (click)="generateHint()">hint</button>
+            </div>
+            
+            <div class="d-flex justify-content-center align-items-center guess">
+                <div *ngIf="guessClicked == true && correct == true">
+                    <p style="color:green">CORRECT</p>
+                </div>
+                <div *ngIf="guessClicked == true && correct == false">
+                    <p style="color:red">WRONG</p>
+                </div>
+                <p class="guessItem">Guess:</p>
+                <input class="guessItem input" name="guess" [(ngModel)]="guess" type="text" (keydown.enter)="submitGuess()">
+                <input class="guessItem guessBtn" type="button" value="Enter" (click)="submitGuess()">
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

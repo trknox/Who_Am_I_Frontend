@@ -23,7 +23,7 @@ export class UserService {
   }
 
   getUserById (id: string): Observable<User> {
-    return this.http.get<User>(this.ROOT_URL +`user-id/${id}`);
+    return this.http.get<User>(this.ROOT_URL + "user-id/" + id);
   }
 
   getUserByUsername (username: string): Observable<User> {

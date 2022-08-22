@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import { HintsComponent } from './home/hints/hints.component';
+import { GuessComponent } from './home/guess/guess.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HintsComponent } from './home/hints/hints.component';
     HomeComponent,
     HeaderComponent,
     HintsComponent,
+    GuessComponent,
   ],
   imports: [
     BrowserModule,
