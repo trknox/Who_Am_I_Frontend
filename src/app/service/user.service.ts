@@ -17,7 +17,7 @@ const httpOptions = {
 })
 export class UserService {
 
-  public ROOT_URL = 'http://localhost:8080/WhoAmI/user/';
+  public ROOT_URL = 'https://who-am-i.azurewebsites.net/WhoAmI/user/';
 
   constructor(private http: HttpClient) {
   }

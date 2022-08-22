@@ -12,7 +12,7 @@ import { UserService } from './user.service';
 })
 export class AuthService {
 
-  private URL = "http://localhost:8080/WhoAmI/";
+  private URL = "https://who-am-i.azurewebsites.net/WhoAmI/";
 
   constructor(private http: HttpClient, private route: Router, private userService: UserService) { }
 

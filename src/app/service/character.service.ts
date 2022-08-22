@@ -19,7 +19,7 @@ const httpOptions = {
 })
 export class CharacterService {
 
-  public ROOT_URL = 'http://localhost:8080/WhoAmI/character/';
+  public ROOT_URL = 'https://who-am-i.azurewebsites.net/WhoAmI/character/';
 
   constructor(private http: HttpClient) {
   }

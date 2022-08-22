@@ -20,7 +20,7 @@ const httpOptions = {
 })
 export class ScoreService {
 
-  public ROOT_URL = 'http://localhost:8080/WhoAmI/score/';
+  public ROOT_URL = 'https://who-am-i.azurewebsites.net/WhoAmI/score/';
 
   constructor(private http: HttpClient) {
   }

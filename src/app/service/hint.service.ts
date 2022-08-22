@@ -18,7 +18,7 @@ const httpOptions = {
 })
 export class HintService {
 
-  public ROOT_URL = 'http://localhost:8080/WhoAmI/hints/char-id/';
+  public ROOT_URL = 'https://who-am-i.azurewebsites.net/WhoAmI/hints/char-id/';
 
   constructor(private http: HttpClient) {
   }
